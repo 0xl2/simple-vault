@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         hideProgressBar={false}
       />
       <ThirdwebProvider
-        activeChain={Sepolia.chainId}
+        supportedChains={[Sepolia]}
         supportedWallets={[embeddedWallet(), metamaskWallet()]}
         clientId={process.env.NEXT_PUBLIC_THIRDWEB_PROJECT_ID}
       >
