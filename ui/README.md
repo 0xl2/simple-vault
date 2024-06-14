@@ -57,4 +57,4 @@ npm run build
 yarn build
 ```
 
-- [Deployed vercel link](https://token-scan-ui.vercel.app/)
+- [Deployed vercel link](https://simple-vault.vercel.app/)

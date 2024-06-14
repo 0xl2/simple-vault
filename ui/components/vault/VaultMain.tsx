@@ -47,6 +47,11 @@ export const VaultMain = () => {
   const userBalance = balanceData ? balanceData.value : utils.parseEther("0");
 
   const doDeposit = async () => {
+    if (!address) {
+      showNotification("Please connect wallet first", NotificationType.ERROR);
+      return;
+    }
+
     if (depositAmount.length == 0) {
       showNotification("Please insert deposit amount", NotificationType.ERROR);
       return;
@@ -74,6 +79,11 @@ export const VaultMain = () => {
   }
 
   const doRedeem = async () => {
+    if (!address) {
+      showNotification("Please connect wallet first", NotificationType.ERROR);
+      return;
+    }
+
     if (!vaultData) return;
 
     if (vaultData.value.eq(0)) {
